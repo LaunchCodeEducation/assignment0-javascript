@@ -1,14 +1,14 @@
 {
-  "name": "sample-assignment",
+  "name": "Assignment#0 Hello world!",
   "version": "1.0.0",
-  "description": "Sample Assignment for independent students to familiarize themselves with GitHub Classroom workflow",
+  "description": "Hello world assignment for learners to familiarize themselves with visual studio code, testing, node, and github ",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+      "test": "jest"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "jasmine": "^3.6.4"
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }

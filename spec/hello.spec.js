@@ -1,11 +1,5 @@
 const hello = require('../hello');
 
-describe("Assignment Sample solution", function() {
-
-	it("outputs the correct message", function() {
-		expect(hello()).toBe("Hello world!");
-	});
-
-	
- 
- });
+test('Checking to see if the test outputs the correct message..', () => {
+	expect(hello()).toBe("Hello world!");
+});
