@@ -1,0 +1,14 @@
+{
+  "name": "Assignment#0 Hello world!",
+  "version": "1.0.0",
+  "description": "Hello world assignment for learners to familiarize themselves with visual studio code, testing, node, and github ",
+  "main": "index.js",
+  "scripts": {
+      "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
