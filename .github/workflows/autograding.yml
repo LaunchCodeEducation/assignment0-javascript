@@ -1,26 +1,99 @@
-name: autograding
+0-javascript (main)
+$ npm test
 
-on: [push]
+> Assignment#0 Hello world!@2.0.0 test
+> jest
 
-jobs:
-  build:
+ FAIL  spec/hello.spec.js
+  × Checking to see if the test outputs the correct message.. (4 ms)                                                
 
-    runs-on: ubuntu-latest
+  ● Checking to see if the test outputs the correct message..                                                       
 
-    steps:
-    - uses: actions/checkout@v3
+    expect(received).toBe(expected) // Object.is equality 
 
-    - name: Use Node.js 
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
-        cache: 'npm'
+    Expected: "Hello world!"
+    Received: "\"Hello world!\""
 
-    - name: Install package dependencies
-      run: npm install
+      2 |
+      3 | test('Checking to see if the test outputs the correct message..', () => {
+    > 4 |       expect(hello()).toBe("Hello world!");     
+        |                       ^
+      5 | });
+      6 |
 
-    - name: Create test build
-      run: npm run build --if-present
+      at Object.toBe (spec/hello.spec.js:4:18)
 
-    - name: Execute test cases
-      run: npm test
+Test Suites: 1 failed, 1 total                            
+Tests:       1 failed, 1 total                            
+Snapshots:   0 total
+Time:        0.25 s, estimated 1 s
+Ran all test suites.
+
+Strano PMD@DESKTOP-KINBFNT MINGW64 ~/LaunchCode/assignment0-javascript (main)
+$ node index.js
+"Hello world!"
+
+Strano PMD@DESKTOP-KINBFNT MINGW64 ~/LaunchCode/assignment0-javascript (main)
+$ npm test
+
+> Assignment#0 Hello world!@2.0.0 test
+> jest
+
+ FAIL  spec/hello.spec.js
+  × Checking to see if the test outputs the correct message.. (3 ms)                                                
+
+  ● Checking to see if the test outputs the correct message..                                                       
+
+    expect(received).toBe(expected) // Object.is equality 
+
+    Expected: "Hello world!"
+    Received: "\"Hello world!\""
+
+      2 |
+      3 | test('Checking to see if the test outputs the correct message..', () => {
+    > 4 |       expect(hello()).toBe("Hello world!");     
+        |                       ^
+      5 | });
+      6 |
+
+      at Object.toBe (spec/hello.spec.js:4:18)
+
+Test Suites: 1 failed, 1 total                            
+Tests:       1 failed, 1 total                            
+Snapshots:   0 total
+Time:        0.249 s, estimated 1 s
+Ran all test suites.
+
+Strano PMD@DESKTOP-KINBFNT MINGW64 ~/LaunchCode/assignment0-javascript (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Strano PMD@DESKTOP-KINBFNT MINGW64 ~/LaunchCode/assignment0-javascript (main)
+$ git add .
+
+Strano PMD@DESKTOP-KINBFNT MINGW64 ~/LaunchCode/assignment0-javascript (main)
+$ git commit -m Hello world! again
+error: pathspec 'world!' did not match any file(s) known to git
+error: pathspec 'again' did not match any file(s) known to git
+
+Strano PMD@DESKTOP-KINBFNT MINGW64 ~/LaunchCode/assignment0-javascript (main)
+$ git commit -m "Hello again!"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Strano PMD@DESKTOP-KINBFNT MINGW64 ~/LaunchCode/assignment0-javascript (main)
+$ git push
+Everything up-to-date
+
+Strano PMD@DESKTOP-KINBFNT MINGW64 ~/LaunchCode/assignment0-javascript (main)
+$
+ *  History restored 
+
+
+Strano PMD@DESKTOP-KINBFNT MINGW64 ~/LaunchCode/assignment0-javascript (main)
+$
